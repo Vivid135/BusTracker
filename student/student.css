@@ -1,0 +1,415 @@
+[data-theme="dark"] {
+    --student-text: #ffffff;
+    --student-text-secondary: #cccccc;
+}
+
+[data-theme="light"] {
+    --student-text: #333333;
+    --student-text-secondary: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--bg-secondary);
+    color: var(--student-text);
+}
+
+.navbar {
+    background: var(--navbar-bg);
+    color: var(--navbar-text);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: var(--navbar-link-hover);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container {
+    padding: 40px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 300px;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.card-content h3 {
+    margin: 0 0 12px 0;
+    color: var(--text-primary);
+}
+
+.card-content p {
+    margin: 0 0 16px 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--button-bg);
+    color: var(--button-text);
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 20px auto;
+        max-width: 100%;
+    }
+    
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+    
+    .navbar div {
+        text-align: center;
+    }
+    
+    .navbar .mobile-profile-link {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        padding: 8px 16px;
+        background: var(--button-bg);
+        color: var(--button-text);
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    #map {
+        height: 350px !important;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .card-icon {
+        font-size: 36px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    .navbar {
+        padding: 10px 15px;
+    }
+    
+    #map {
+        height: 300px !important;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    th, td {
+        padding: 4px;
+    }
+    
+.dataTables_wrapper {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.dataTables {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 14px;
+}
+
+.dataTables thead th {
+    background: linear-gradient(135deg, #00796b, #004d40) !important;
+    color: white !important;
+    padding: 12px 8px !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    border-bottom: 2px solid #004d40 !important;
+}
+
+.dataTables tbody td {
+    padding: 10px 8px !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.dataTables tbody tr:nth-child(even) {
+    background: rgba(0, 121, 107, 0.05) !important;
+}
+
+.dataTables tbody tr:hover {
+    background: rgba(0, 121, 107, 0.1) !important;
+}
+
+.dataTables_filter {
+    margin-bottom: 15px !important;
+    padding: 8px 12px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    background: var(--card-bg) !important;
+    width: 100% !important;
+}
+
+.dataTables_length, .dataTables_info {
+    margin: 15px 0 !important;
+    color: var(--text-primary) !important;
+}
+
+.dataTables_paginate {
+    margin-top: 15px !important;
+}
+
+.dataTables_paginate .paginate_button {
+    background: var(--button-bg) !important;
+    color: var(--button-text) !important;
+    border: none !important;
+    padding: 6px 12px !important;
+    margin: 0 2px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background: var(--button-hover) !important;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background: linear-gradient(135deg, #00796b, #004d40) !important;
+    color: white !important;
+}
+
+.sorting_asc::after, .sorting_desc::after {
+    color: white !important;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: var(--navbar-bg);
+    color: var(--navbar-text);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: var(--button-hover);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .container {
+        padding: 20px;
+        overflow-x: auto;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 20px;
+    }
+}
+
+.dataTables_wrapper {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.dataTables {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 14px;
+}
+
+.dataTables thead th {
+    background: linear-gradient(135deg, #00796b, #004d40) !important;
+    color: white !important;
+    padding: 12px 8px !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    border-bottom: 2px solid #004d40 !important;
+}
+
+.dataTables tbody td {
+    padding: 10px 8px !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.dataTables tbody tr:nth-child(even) {
+    background: rgba(0, 121, 107, 0.05) !important;
+}
+
+.dataTables tbody tr:hover {
+    background: rgba(0, 121, 107, 0.1) !important;
+}
+
+.dataTables_filter input {
+    margin-bottom: 15px !important;
+    padding: 8px 12px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    background: var(--card-bg) !important;
+    width: 100% !important;
+}
+
+.dataTables_length, .dataTables_info {
+    margin: 15px 0 !important;
+    color: var(--text-primary) !important;
+}
+
+.dataTables_paginate {
+    margin-top: 15px !important;
+}
+
+.dataTables_paginate .paginate_button {
+    background: var(--button-bg) !important;
+    color: var(--button-text) !important;
+    border: none !important;
+    padding: 6px 12px !important;
+    margin: 0 2px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background: var(--button-hover) !important;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background: linear-gradient(135deg, #00796b, #004d40) !important;
+    color: white !important;
+}
+
+.sorting_asc::after, .sorting_desc::after {
+    color: white !important;
+}
+}

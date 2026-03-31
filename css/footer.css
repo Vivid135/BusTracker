@@ -1,0 +1,12 @@
+.footer {
+    background: var(--navbar-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #1e3c72;
+    --primary-hover: #16325c;
+    --primary-light: #2a5298;
+    --secondary-color: #ffd43b;
+    
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f6f9;
+    --bg-gradient: linear-gradient(135deg, #1e3c72, #2a5298);
+    --bg-gradient-alt: linear-gradient(to right, #1e3c72, #2a5298);
+    
+    --text-primary: #333333;
+    --text-secondary: #555555;
+    --text-light: #ffffff;
+    --text-link: #1e3c72;
+    
+    --border-color: #ccc;
+    --border-focus: #1e3c72;
+    --border-focus-shadow: rgba(30, 60, 114, 0.3);
+    
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-color-hover: rgba(0, 0, 0, 0.2);
+    
+    --card-bg: #ffffff;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.2);
+    
+    --navbar-bg: #1e3c72;
+    --navbar-text: #ffffff;
+    --navbar-link-hover: #ffd43b;
+    --navbar-link-active: #1b5fa7;
+    
+    --input-bg: #ffffff;
+    --input-border: #ccc;
+    --input-focus: #1e3c72;
+    --button-bg: #1e3c72;
+    --button-hover: #16325c;
+    --button-text: #ffffff;
+    
+    --footer-bg: #1e3c72;
+    --footer-text: #ffffff;
+    
+    --success: #28a745;
+    --error: #dc3545;
+    --warning: #ffc107;
+}
+
+[data-theme="dark"] {
+    --primary-color: #4a7ba7;
+    --primary-hover: #5a8bb7;
+    --primary-light: #6a9bc7;
+    --secondary-color: #ffcc00;
+    
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-gradient: linear-gradient(135deg, #2d3748, #1a202c);
+    --bg-gradient-alt: linear-gradient(to right, #2d3748, #1a202c);
+    
+    --text-primary: #e2e8f0;
+    --text-secondary: #cbd5e0;
+    --text-light: #ffffff;
+    --text-link: #4a7ba7;
+    
+    --border-color: #4a5568;
+    --border-focus: #4a7ba7;
+    --border-focus-shadow: rgba(74, 123, 167, 0.3);
+    
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-color-hover: rgba(0, 0, 0, 0.5);
+    
+    --card-bg: #2d3748;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --card-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.5);
+    
+    --navbar-bg: #2d3748;
+    --navbar-text: #ffffff;
+    --navbar-link-hover: #ffcc00;
+    --navbar-link-active: #4a5568;
+    
+    --input-bg: #2d3748;
+    --input-border: #4a5568;
+    --input-focus: #4a7ba7;
+    --button-bg: #4a7ba7;
+    --button-hover: #5a8bb7;
+    --button-text: #ffffff;
+    
+    --footer-bg: #2d3748;
+    --footer-text: #ffffff;
+}
+
+.theme-toggle {
+    background: none;
+    border: 2px solid var(--navbar-text);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+}
+
+.theme-toggle:hover {
+    background: var(--navbar-link-hover);
+    border-color: var(--navbar-link-hover);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--navbar-text);
+}
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
